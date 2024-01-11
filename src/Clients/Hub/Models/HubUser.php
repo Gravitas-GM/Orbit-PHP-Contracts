@@ -1,7 +1,7 @@
 <?php
-    namespace Gravitas\Orbit\Contracts\Clients\Hub\Models;
+	namespace Gravitas\Orbit\Contracts\Clients\Hub\Models;
 
-    class HubUser {
+	class HubUser {
 		public int $id;
 
 		public HubAccount $account;
@@ -17,4 +17,4 @@
 		*/
 		public array $permissions;
 
-    }
+	}

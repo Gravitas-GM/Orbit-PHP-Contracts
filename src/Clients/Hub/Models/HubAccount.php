@@ -1,9 +1,9 @@
 <?php
-    namespace Gravitas\Orbit\Contracts\Clients\Hub\Models;
+	namespace Gravitas\Orbit\Contracts\Clients\Hub\Models;
 
-    class HubAccount {
+	class HubAccount {
 		public int $id;
 
 		public string $name;
 
-    }
+	}
