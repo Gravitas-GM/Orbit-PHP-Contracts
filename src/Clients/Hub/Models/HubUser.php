@@ -1,18 +1,20 @@
 <?php
+    namespace Gravitas\Orbit\Contracts\Clients\Hub\Models;
 
-	namespace Gravitas\Orbit\Contracts\Clients\Hub\Models;
-
-	use Gravitas\Orbit\Contracts\Permission;
-
-	class HubUser {
+    class HubUser {
 		public int $id;
+
 		public HubAccount $account;
+
 		public string $firstName;
+
 		public string $lastName;
+
 		public string $emailAddress;
 
 		/**
-		 * @var Permission[]
-		 */
+		* @param Permission[]
+		*/
 		public array $permissions;
-	}
+
+    }
