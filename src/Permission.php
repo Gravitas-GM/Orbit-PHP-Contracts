@@ -14,6 +14,9 @@
 		// Allows a user to manage account settings.
 		case ManageAccount = "manage account";
 
+		// Allows a user to manage survey settings for the account.
+		case ManageSurvey = "manage survey";
+
 		public function isAllowed(Permission $permission, array $permissions): bool {
 			return in_array(static::Admin, $permissions) || in_array($permission, $permissions);
 		}
