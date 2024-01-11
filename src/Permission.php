@@ -17,7 +17,18 @@
 		// Allows a user to manage survey settings for the account.
 		case ManageSurvey = "manage survey";
 
-		public function isAllowed(Permission $permission, array $permissions): bool {
-			return in_array(self::Admin, $permissions) || in_array($permission, $permissions);
+
+		/**
+		 * Returns `true` if the variant is granted by the `$permissions` set.
+		 *
+		 * A permission is considered "granted" if the user has the {@see self::Admin} permission, or if the permission
+		 * being tested is present in the set.
+		 *
+		 * @param array $permissions
+		 *
+		 * @return bool
+		 */
+		public function isGrantedBy(array $permissions): bool {
+			return in_array(self::Admin, $permissions) || in_array($this, $permissions);
 		}
 	}
