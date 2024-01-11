@@ -13,7 +13,7 @@
 		public string $emailAddress;
 
 		/**
-		* @param Permission[]
+		* @var \Gravitas\Orbit\Contracts\Permission[]
 		*/
 		public array $permissions;
 

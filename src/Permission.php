@@ -18,6 +18,6 @@
 		case ManageSurvey = "manage survey";
 
 		public function isAllowed(Permission $permission, array $permissions): bool {
-			return in_array(static::Admin, $permissions) || in_array($permission, $permissions);
+			return in_array(self::Admin, $permissions) || in_array($permission, $permissions);
 		}
 	}
