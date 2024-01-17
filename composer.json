@@ -17,5 +17,11 @@
         "php": "^8.1",
         "symfony/http-client-contracts": "^3.4",
         "symfony/serializer": "^6.0"
+    },
+    "require-dev": {
+        "symfony/security-core": "^7.0"
+    },
+    "suggest": {
+        "symfony/security-bundle": "Required for classes in the Gravitas\\Orbit\\Contracts\\Security namespace"
     }
 }
