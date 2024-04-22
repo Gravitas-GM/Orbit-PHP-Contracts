@@ -22,6 +22,6 @@
 		}
 
 		public function getQuery(): array {
-			// TODO: Implement getQuery() method.
+			return $this->query;
 		}
 	}
