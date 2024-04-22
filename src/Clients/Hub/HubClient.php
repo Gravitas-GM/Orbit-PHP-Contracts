@@ -6,9 +6,19 @@
 	use Gravitas\Orbit\Contracts\Clients\Hub\Models\HubUser;
 	use Gravitas\Orbit\Contracts\Clients\ProjectionInterface;
 	use Gravitas\Orbit\Contracts\Clients\QueryInterface;
+	use Symfony\Component\Serializer\SerializerInterface;
 	use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
+	use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 	class HubClient extends AbstractClient {
+		public function __construct(
+			HttpClientInterface $orbitHubClient,
+			SerializerInterface $serializer,
+			string $responseFormat = 'json',
+		) {
+			parent::__construct($orbitHubClient, $serializer, $responseFormat);
+		}
+
 		/**
 		 * @param ProjectionInterface|null $projection
 		 * @param QueryInterface|null      $query
