@@ -46,10 +46,10 @@
 			$options = ['query' => []];
 
 			if ($projection)
-				$options['query']['p'] = $projection->build();
+				$options['query']['p'] = json_encode($projection->build());
 
 			if ($query)
-				$options['query']['q'] = $query->getQuery();
+				$options['query']['q'] = json_encode($query->getQuery());
 
 			return $options;
 		}
