@@ -17,4 +17,6 @@
 		*/
 		public array $permissions;
 
+		public ?HubDepartment $department;
+
 	}
