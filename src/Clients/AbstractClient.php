@@ -9,6 +9,7 @@
 
 	abstract class AbstractClient {
 		protected const METHOD_GET = 'GET';
+		protected const METHOD_PUT = 'PUT';
 
 		public function __construct(
 			protected HttpClientInterface $client,
